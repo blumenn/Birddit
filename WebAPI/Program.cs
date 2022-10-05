@@ -1,3 +1,9 @@
+using Application.DaoInterfaces;
+using Application.Logic;
+using Application.LogicInterfaces;
+using FileData;
+using FileData.DAOs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -15,6 +21,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+builder.Services.AddScoped<FileContext>();
+builder.Services.AddScoped<IUserDAO, UserFileDAO>();
+builder.Services.AddScoped<IUserLogic, UserLogic>();
 
 app.UseHttpsRedirection();
 
