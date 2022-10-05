@@ -17,7 +17,6 @@
     <setting file="file://$PROJECT_DIR$/Shared/testClass.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Shared/text3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/WebAPI/Program.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/WebAPI/WeatherForecast.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -47,6 +46,7 @@
       <workItem from="1664957867854" duration="709000" />
       <workItem from="1664963809709" duration="236000" />
       <workItem from="1664964064112" duration="102000" />
+      <workItem from="1664966010329" duration="6000" />
     </task>
     <servers />
   </component>

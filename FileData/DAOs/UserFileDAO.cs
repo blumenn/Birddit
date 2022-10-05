@@ -1,4 +1,5 @@
 using Application.DaoInterfaces;
+using Shared.DTOs;
 using Shared.Models;
 
 namespace FileData.DAOs;
@@ -35,5 +36,15 @@ public class UserFileDAO : IUserDAO
             u.userName.Equals(userName, StringComparison.OrdinalIgnoreCase)
         );
         return Task.FromResult(existing);
+    }
+
+    public Task<IEnumerable<User>> GetUserAsync(SearchUserParametersDto searchParameters)
+    {
+        throw new NotImplementedException();
+    }
+
+    public Task<IEnumerable<User>> GetAsync(SearchUserParametersDto searchParameters)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -25,9 +25,9 @@ public class UserLogic : IUserLogic
         {
             userName = dto.UserName
         };
-        
+
         User created = await userDao.CreateAsync(toCreate);
-        
+
         return created;
     }
 
@@ -40,5 +40,10 @@ public class UserLogic : IUserLogic
 
         if (userName.Length > 15)
             throw new Exception("Username must be less than 16 characters!");
+    }
+
+    public Task<IEnumerable<User>> GetUserAsync(SearchUserParametersDto searchParameters)
+    {
+        return userDao.GetUserAsync(searchParameters);
     }
 }

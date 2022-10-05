@@ -13,6 +13,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddScoped<FileContext>();
+builder.Services.AddScoped<IUserDAO, UserFileDAO>();
+builder.Services.AddScoped<IUserLogic, UserLogic>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,9 +25,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-builder.Services.AddScoped<FileContext>();
-builder.Services.AddScoped<IUserDAO, UserFileDAO>();
-builder.Services.AddScoped<IUserLogic, UserLogic>();
+
 
 app.UseHttpsRedirection();
 
@@ -32,3 +34,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+
