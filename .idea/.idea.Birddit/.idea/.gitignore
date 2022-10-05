@@ -11,3 +11,9 @@
 # Datasource local storage ignored files
 /dataSources/
 /dataSources.local.xml
+*.suo
+*.user
+_ReSharper.*
+bin
+obj
+packages
